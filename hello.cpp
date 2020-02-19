@@ -2,5 +2,6 @@
 #include <stdio.h>
 
 int main() {
-    puts("Hello world!");
+	auto i {1};
+    printf("Hello world! %d \n",i);
 }

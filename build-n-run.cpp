@@ -77,7 +77,7 @@ int main(int argc, char** argv) {
 		path tmp(target.string() + ".tmp.cpp");
 		
 		// https://stackoverflow.com/a/1003654/4247442
-		string cmd = "tail -n +2 \"" + source.string() + "\" > \"" + tmp.string() + "\"; c++ \"" + tmp.string() + "\" -o \"" + target.string() + "\" -Wall -lstdc++fs";
+		string cmd = "tail -n +2 \"" + source.string() + "\" > \"" + tmp.string() + "\"; c++ \"" + tmp.string() + "\" -o \"" + target.string() + "\" -Wall -std=gnu++11 -lstdc++fs";
 		int result = system(cmd.c_str());
 		remove(tmp);
 		if (result != 0) {
